@@ -19,36 +19,53 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
-    content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 html, body {
-    overflow: hidden;
     height: 100%;
+    background-color: transparent;
 }
+
 html {
     font-family: Verdana, Arial, sans-serif;
-    font-size: 24pt;
+    font-size: 2vw; /* logo is also scaled by width of the screen */
+}
+a,
+a:active,
+a:visited {
+    color: rgba(255,89,32,1);
+}
+
+img.logo {
+    width: 50%;
+    padding-left: 25%;
 }
 
 video#bgvid {
@@ -60,7 +77,42 @@ video#bgvid {
     min-height: 100%;
     width: auto;
     height: auto;
-    background: url(../media/blackfade.png) no-repeat;
+    background: url(../media/whitefade.png) no-repeat;
     background-size: cover;
+}
+
+.parallax,
+.parallax_clone {
+    padding: 6vh 0;
+    visibility: hidden; /* to hide them until initializing is done etc. */
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    /*background-color: rgba(200,200,200,.4);*/
+}
+
+.spacer {
+    height: 100vh;
+    background: transparent;
+}
+.spacer.half {
+    height: 75vh;
+}
+
+@media (max-width: 590px) {
+    /* and (max-height: 650px)*/
+    html {
+        font-size: 6vw;
+    }
+    video#bgvid {
+        left: -15vh
+    }
+    img.logo {
+        width: 80%;
+        padding-left: 10%;
+    }
+
 }
 
