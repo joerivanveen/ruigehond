@@ -25,6 +25,10 @@ function scrollnext() { /* temporary */
     window.scrollTo({top: window.height * 2.5, left: 0, behavior: 'smooth'});
 }
 
+window.onresize = function(){
+    window.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+};
+
 function startPage() {
     // set some global vars
     window.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -42,8 +46,8 @@ function startPage() {
             clone.classList.add('parallax_clone');
             clone.style.position = 'absolute';
             clone.style.left = '0px';
-            el.parentNode.insertBefore(clone, el.nextSibling);
-            el.nextSibling.style.visibility = 'visible';
+            el.parentNode.insertBefore(clone, el);
+            el.previousSibling.style.visibility = 'visible';
         }
     }
     // start handling parallax onscroll
@@ -59,7 +63,7 @@ function startPage() {
             if (loc.top < window.height && loc.bottom > 0) {
                 let balance = 7 * ((((loc.height / 2) + loc.top) / window.height) - .5);
                 let m = Math.round(retval(balance) * window.height / 100);
-                el.nextSibling.style.marginTop = m + 'px';
+                el.previousSibling.style.marginTop = m + 'px';
                 /*if (i === 0) {
                     console.log(loc.top + ' < ' + window.height + ' && ' + loc.bottom + ' > 0');
                     console.log(balance + ' | ' + m);
@@ -82,10 +86,11 @@ function startPage() {
          */
         window.setTimeout(function () {
             if (pageYOffset < 50) {
-                window.scrollTo({top: window.height * .9, left: 0, behavior: 'smooth'});
+                window.scrollTo({top: window.height * .95, left: 0, behavior: 'smooth'});
             }
         }, 8000);
     };
     // don't forget to add muted="muted" to the html attributes or it won't play
     video.play();
 }
+

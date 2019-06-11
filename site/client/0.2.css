@@ -83,8 +83,15 @@ video#bgvid {
 
 .parallax,
 .parallax_clone {
-    padding: 6vh 0;
+    padding: 8vh 0;
     visibility: hidden; /* to hide them until initializing is done etc. */
+    width: 100%;
+}
+.content span {
+    padding: .4em;
+    text-shadow: 0 0 3px #fff;
+    line-height: 1.5em;
+    /*background-color: rgba(255,255,255,.4);*/
 }
 
 .content {
@@ -92,13 +99,17 @@ video#bgvid {
     text-align: center;
     /*background-color: rgba(200,200,200,.4);*/
 }
+.content.parallax,
+.content.parallax_clone {
+    padding: 16vh 0;
+}
 
 .spacer {
     height: 100vh;
     background: transparent;
 }
 .spacer.half {
-    height: 75vh;
+    height: 50vh;
 }
 
 @media (max-width: 590px) {
@@ -115,4 +126,3 @@ video#bgvid {
     }
 
 }
-
