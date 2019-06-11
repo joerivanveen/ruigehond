@@ -93,4 +93,3 @@ function startPage() {
     // don't forget to add muted="muted" to the html attributes or it won't play
     video.play();
 }
-
