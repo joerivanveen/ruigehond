@@ -61,6 +61,7 @@ a,
 a:active,
 a:visited {
     color: rgba(255,89,32,1);
+    white-space: nowrap;
 }
 
 img.logo {
@@ -77,7 +78,7 @@ video#bgvid {
     min-height: 100%;
     width: auto;
     height: auto;
-    background: url(../media/whitefade.png) no-repeat;
+    background: url(../media/screenshot-ruigehond-video.jpg) no-repeat;
     background-size: cover;
 }
 

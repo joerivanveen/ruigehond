@@ -9,18 +9,20 @@
     <meta property="og:site_name" content="ruige hond"/>
     <meta property="og:title" content="ruige hond"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:description" content="Ruige hond = present online."/>
-    <meta property="og:image" content="http://ruigehond.nl/media/ruigehond.jpg"/>
-    <meta property="og:image:secure_url" content="https://ruigehond.nl/media/ruigehond.jpg"/>
-    <meta name="keywords" content="ruige hond present online"/>
+    <meta property="og:description" content="Ruige hond = present online. Profielpagina van webdeveloper en tekstschrijver Joeri van Veen."/>
+    <meta property="og:image" content="http://ruigehond.nl/media/Joeri-van-Veen.jpg"/>
+    <meta property="og:image:secure_url" content="https://ruigehond.nl/media/Joeri-van-Veen.jpg"/>
+    <meta property="og:image:width" content="1199"/>
+    <meta property="og:image:height" content="1493"/>
+    <meta name="keywords" content="ruige hond present online webdeveloper freelance zzp ontwikkelaar tekstschrijver"/>
     <meta name="viewport" id="viewport" content="initial-scale=1.0"/>
     <script type="text/javascript" src="/client/0.2.js" async></script>
-    <link rel="stylesheet" href="/client/0.2.css"/>
+    <link rel="stylesheet" href="/client/style.css?version=0.3"/>
 </head>
 
 <body>
 
-<video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" poster="/media/whitefade.png" id="bgvid"
+<video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" poster="/media/screenshot-ruigehond-video.jpg" id="bgvid"
        data-webm="/media/ruigehond3.webm"
        data-mp4="/media/ruigehond3.mp4">
 </video>
@@ -46,14 +48,29 @@
 </div>
 <div class="content parallax">
     <span>
-        Ik ben Joeri, freelance webdeveloper en tekstschrijver, aangenaam.
+        Ik ben Joeri, freelance webdeveloper en vormgever, aangenaam.
+    </span>
+</div>
+<div class="content parallax">
+    <span>
+        Special project: <a href="https://coronaformulier.nl">Corona triage formulier</a>.
+    </span>
+</div>
+<div class="content parallax">
+    <span>
+        Lead developer <a href="https://peatcms.com">peatcms</a>.
+    </span>
+</div>
+<div class="content parallax">
+    <span>
+        Ik maak ook <a href="https://wordpress.org/plugins/wp-reading-progress/">WordPress plugins</a>.
     </span>
 </div>
 <div class="content parallax">
     <script>
         function ruigehond() {
-            let apenstaart = '@';
-            let domain = window.location.host;
+            var apenstaart = '@';
+            var domain = window.location.host;
             return '<a href="mailto:hallo' + apenstaart + domain + '">E-mail: hallo' + apenstaart + domain + '</a>';
         }
 
